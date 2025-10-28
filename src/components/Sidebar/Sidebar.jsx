@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiFilePlus } from "react-icons/fi";
-import { FaQrcode } from "react-icons/fa";
+import { FaQrcode,FaRobot} from "react-icons/fa";
 import "./Sidebar.css";
 
 const MenuItem = ({ icon, label, expanded, onClick }) => (
@@ -33,6 +33,12 @@ export default function Sidebar() {
         <MenuItem
           icon={<FaQrcode size={24} />}
           label="Générer QR Code"
+          expanded={expanded}
+          onClick={() => navigate("/")}
+        />
+        <MenuItem
+          icon={<FaRobot  size={24} />}
+          label="Agent IA"
           expanded={expanded}
           onClick={() => navigate("/")}
         />
