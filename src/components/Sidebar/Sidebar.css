@@ -1,0 +1,84 @@
+.sidebar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  width: 70px;
+  background: linear-gradient(180deg, #1877f2, #0e5dc2);
+  border-radius: 20px;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar.expanded {
+  width: 220px;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.logo {
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 25px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sidebar.expanded .logo {
+  text-align: left;
+  padding-left: 12px;
+  font-size: 18px;
+}
+
+/* menu */
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center; /* centrer horizontalement en barre compacte */
+  gap: 18px;
+}
+
+.sidebar.expanded .nav {
+  align-items: flex-start; /* aligner à gauche quand étendue */
+}
+
+/* menu item */
+.menu-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background: transparent; /* pas de fond */
+  border: none;            /* pas de bouton */
+  padding: 0;              /* pas de padding */
+}
+
+.menu-item:hover {
+  transform: translateX(2px); /* léger déplacement au hover */
+}
+
+.icon {
+  color: white;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* texte du menu */
+.menu-text {
+  margin-left: 15px;
+  white-space: nowrap;
+  font-size: 16px;
+}
