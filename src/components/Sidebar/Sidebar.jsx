@@ -32,7 +32,7 @@ export default function Sidebar() {
         />
         <MenuItem
           icon={<FaQrcode size={24} />}
-          label="Générer QR Code"
+          label="Générer QR Codes"
           expanded={expanded}
           onClick={() => navigate("/")}
         />
