@@ -1,0 +1,38 @@
+{
+  "openapi": "3.0.0",
+  "info": { "title": "NATURANO Drive Proxy", "version": "1.0.0" },
+  "servers": [{ "url": "https://your-app.vercel.app" }],
+  "paths": {
+    "/api/health": {
+      "get": { "operationId": "health", "summary": "Proxy health", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/agent": {
+      "post": {
+        "operationId": "dispatch",
+        "summary": "Dispatch Drive actions",
+        "description": "Body must contain an `action` matching Apps Script dispatcher.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": {
+              "type": "object",
+              "additionalProperties": true,
+              "properties": {
+                "action": {
+                  "type": "string",
+                  "enum": ["rename","move","makepdf","setmeta","getmeta","searchmeta","tagstandard","logsexport","echo"]
+                }
+              },
+              "required": ["action"]
+            } }
+          }
+        },
+        "responses": {
+          "200": { "description": "Success" },
+          "400": { "description": "Bad Request" },
+          "502": { "description": "Upstream error" }
+        }
+      }
+    }
+  }
+}

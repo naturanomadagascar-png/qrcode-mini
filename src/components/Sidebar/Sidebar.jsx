@@ -40,7 +40,7 @@ export default function Sidebar() {
           icon={<FaRobot  size={24} />}
           label="Agent IA"
           expanded={expanded}
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/agentIA")}
         />
       </nav>
     </aside>
