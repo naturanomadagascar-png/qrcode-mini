@@ -469,5 +469,3 @@ const QRCodeGenerator = () => {
     </div>
   );
 };
-
-export default QRCodeGenerator;
