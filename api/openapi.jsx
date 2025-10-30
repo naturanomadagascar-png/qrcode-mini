@@ -9,7 +9,7 @@ const spec = {
     "description": "API de test de connectivité React/Vercel pour ChatGPT Actions."
   },
   "servers": [
-    { "url": "https://reflection-bath-summary-expects.trycloudflare.com" }
+    { "url": "https://tokyo-nations-lottery-progress.trycloudflare.com/" }
   ],
   "paths": {
     "/api/health": {
